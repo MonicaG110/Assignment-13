@@ -1,73 +1,118 @@
+body {
+	font-family: arial;
+}
+
+#user-comment {
+	height: 60px;
+}
+.vcenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+} 
+
 #container {
-	height:650px;
-	width:520px;
-	margin:auto;
+	height: 650px;
+	width: 520px;
+	margin: auto;
 }
+
 #master {
-	border:2px solid gray;
-	border-radius:3px;
-	width:520px;
-	padding:0;
-
+	border: 2px solid #d3d3d3;
+	border-radius: 3px;
+	width: 100%;
+	padding: 0;
 }
 
-h1 {
-	margin: 0;
-	position: relative;
-	top:20px;
-}
+
 #headerDiv {
 	width:520px;
 	color:#fff;
-	background-color:#3B5998;
+	background-color:#0174DF;
 	height:75px;
-	text-align: center;
 	position: relative;
 	margin-bottom:30px;
+	font-size: 20px;
 }
-#input {
+
+#form-title {
+	margin-left: 21px;
+}
+
+.input {
 	position:relative;
 	margin:2px;
 	width:425px;
-	padding-left: 30px;
+	padding-left: 8px;
 	height:30px;
-	
 	border:none;
+	font-size: 12px;
 	
 
 }
 
-#inputDiv {
-	border:1px solid black;
+.inputDiv {
+	border:1px solid #d3d3d3;
 	border-radius: 3px;
-	margin:8px;
-
-
-}
-#images {
-	right:450px;
-	position: relative;
-
-
-
+	margin: 13px 20px 18px 20px;
 }
 
-#input:nth-child(4) {
+.images {
+	display: inline-block;
+	margin-left: 15px;
+	color: #d3d3d3;
+}
+
+.input:nth-child(4) {
 	display: none;
 }
 
-#input:nth-child(7) {
+.input:nth-child(7) {
 	height:100px;
 }
 
 #footerDiv {
 	width:520px;
-	color:#fff;
+	color:#A9D0F5;
 	background-color: #6bcbdb;
 	height:75px;
 }
 
-select {
-	width:425px;
-	margin-left: 20px;
+.select-wrapper {
+	margin: 13px 20px 18px 21px;
+	border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    
+    background: url("img/icon-select.png") no-repeat 90% 50%;
+}
+
+.select-wrapper select {
+    padding: 10px 10px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+	margin: 2px;
+	width: 100%;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+#btnSubmit {
+	background-color: #0174DF;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+	margin-left: 21px;
+	margin-top: 20px;
 }

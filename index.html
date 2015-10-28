@@ -1,72 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Assignment-13-Colab</title>
+    <meta charset="UTF-8">
+    <title>Assignment-13-Colab</title>
 
-	<link rel="stylesheet" type="text/css" href="font-awesome-4.4.0/css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
-	
-	
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.4.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    
+    
 </head>
 <body>
 
 <div id="container">
-	
-	
+    
+    
 </div>
 
 
 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>    
 <script src="main.js"></script>
 
 <script type="x-tmpl-mustache" id="form">
-	<div id="master">
-		<div id="headerDiv">
-			<h1>Sign Up For My Web App</h1>
-		</div>
-	{{#data}}
-	
-	
+    <div id="master">
+        <div id="headerDiv">
+            <div id="form-title" class="vcenter">Sign Up For My Web App</div>
+        </div>
+        <form>
+            <div class="form-fields">
+                {{#data}}
+                {{#options.length}}
+                    <div class="select-wrapper">
+                        <select name="language">
+                            <option value="" selected hidden>Select Language...</option>
+                            {{#options}}
+                                <option value="{{value}}">{{label}}</option>
+                            {{/options}} 
+                        </select>
+                    </div>
+                 {{/options.length}}
+            
+                {{^options}}                
+                    <div class="inputDiv">
+                        <div class="fa {{icon}} images"></div>
+                        <input type="{{type}}" id="{{id}}" class="input" placeholder="{{label}}">
+                    </div>
+                {{/options}}
+                {{/data}}
 
-		  <div id="inputDiv">
-		  	
-		  <input type="{{type}}" id="input" placeholder="{{label}}">
-
-		  <span id="images" class="fa {{icon}}"></span>
-		 
-		  {{#options.length}}
-		  	<select>
-		  	{{#options}}
-		  		
-		  			<option value="{{value}}">{{label}}</option>
-
-		  		
-		  	{{/options}} 
-		  	</select>
-		  {{/options.length}}
-
-	</div>
-
-		
-
-	
-
-
-
-	
-
-
-	
-	{{/data}}
-	<div id="footerDiv"></div>
-	</div>
-	
-
-
-
+            </div>
+            <div id="footerDiv">
+                <button id="btnSubmit" type="submit" form="form1" value="Submit">Submit</button>
+            </div>
+        </form>
+    </div>
 
 
 </script>
